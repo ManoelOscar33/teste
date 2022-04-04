@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Novo Usuário</h5>
+              <form [formGroup]="formulario" (ngSubmit)="criarUsuario();" novalidate>
+                <div class="form-group">
+                    <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Qual o seu nome?"
+                    autoconplete="off"
+                    formControlName="name"
+                    
+                    />
+                </div>
+                <div class="form-group">
+                    <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Qual a sua profissão?"
+                    autoconplete="off"
+                    formControlName="job"
+                    />
+                </div>
+                <div>
+                    <button
+                    style="margin-top: 5px;"
+                    type="submit"
+                    class="btn btn-lg btn-primary"
+                    [disabled]="!formulario.value"
+                    >
+                    Salvar dados
+                    </button>
+                </div>
+               </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row largura">
+    <div class="col">
+        <div class="card" style="width: 18rem;" *ngFor="let usuario of usuarios">
+            <div class="card-body">
+                <h5 class="card-title">{{usuario.name}}</h5>
+                <p class="card-text">{{usuario.job}}</p>
+                <button class="btn btn-info" (click)="atualizar(usuario.name, usuario.job)">Atualizar</button>
+            </div>
+        </div>
+    </div>
+</div>

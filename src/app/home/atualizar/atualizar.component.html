@@ -1,0 +1,52 @@
+<div class="conatiner">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Atualizar Usuário</h5>
+                  <form [formGroup]="formulario" (ngSubmit)="atualizarUsuario();" novalidate>
+                    <div class="form-group">
+                        <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Qual seu nome?"
+                        autoconplete="off"
+                        formControlName="name"
+                        
+                        />
+                    </div>
+                    <div class="form-group">
+                        <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Qual sua profissão?"
+                        autoconplete="off"
+                        formControlName="job"
+                        />
+                    </div>
+                    <div>
+                        <button
+                        style="margin-top: 5px;"
+                        type="submit"
+                        class="btn btn-lg btn-primary"
+                        [disabled]="!formulario.value"
+                        >
+                        Atualizar dados
+                        </button>
+                    </div>
+                  </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 largura" *ngFor="let usuario of usuarios">
+            <div class="card">
+                <div class="card-body">
+                <img [src]="usuario.avatar" class="card-img-top img-fluid">
+                <h5 class="card-title">{{usuario.name}}</h5>
+                <p class="card-text">{{usuario.email}}</p>
+                <p class="card-text">{{usuario.job}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

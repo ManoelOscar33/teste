@@ -1,0 +1,39 @@
+h3 {
+    margin-left: 110px;
+}
+
+.row {
+    margin: 30px;
+}
+
+.form-group {
+    margin-bottom: 5px;
+    width: 400px;
+}
+
+.largura {
+    margin-top: 300px;
+    margin-left: -320px;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+input.ng-valid.ng-touched {
+    border: 1px solid green;
+}
+
+.card {
+    width: 450px;
+    margin-left: 400px;
+    margin-top: 50px;
+}
+
+.card h5 {
+    text-align: center;
+}
+
+.card-text {
+    text-align: center;
+}

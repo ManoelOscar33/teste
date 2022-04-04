@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" *ngFor="let usuario of usuarios">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <img [src]="usuario.avatar" class="card-img-top">
+                  <h5 class="card-title">{{usuario.first_name  +  usuario.last_name}}</h5>
+                  <p class="card-text">{{usuario.email}}</p>
+                  <button class="btn btn-info" (click)="atualizar(usuario.avatar, usuario.first_name, usuario.last_name, usuario.email)">Atualizar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
